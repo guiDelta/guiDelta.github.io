@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio acadêmico de Guilherme Andrade de Oliveira, estudante de Análise e Desenvolvimento de Sistemas.">
+  <title>Guilherme Andrade | Portfólio</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #121a2e;
+      --surface-light: #19243d;
+      --text: #edf2ff;
+      --muted: #aab6cf;
+      --accent: #72e0c0;
+      --accent-dark: #193f3a;
+      --line: rgba(190, 207, 239, .15);
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(77, 120, 190, .18), transparent 38rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 76px 0 58px; border-bottom: 1px solid var(--line); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      color: var(--accent); font-size: .82rem; font-weight: 700;
+      letter-spacing: .13em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--accent); }
+    h1 { margin: 18px 0 8px; font-size: clamp(2.35rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -.045em; }
+    .subtitle { margin: 0; color: var(--accent); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-weight: 600; }
+    .intro { max-width: 720px; margin: 24px 0 0; color: var(--muted); font-size: 1.06rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 11px 17px; border: 1px solid var(--line); border-radius: 9px;
+      text-decoration: none; font-weight: 650; transition: .2s ease;
+    }
+    .button.primary { background: var(--accent); color: #08211d; border-color: var(--accent); }
+    .button:hover { transform: translateY(-2px); }
+    main { padding: 54px 0 70px; }
+    section { margin-bottom: 54px; }
+    .section-label { color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin: 7px 0 20px; font-size: clamp(1.65rem, 3vw, 2.25rem); letter-spacing: -.025em; }
+    .project {
+      padding: clamp(22px, 4vw, 36px); border: 1px solid var(--line);
+      border-radius: 18px; background: linear-gradient(145deg, rgba(25,36,61,.96), rgba(18,26,46,.96));
+      box-shadow: 0 18px 50px rgba(0,0,0,.18);
+    }
+    .project-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .project h3 { margin: 0; font-size: 1.55rem; }
+    .tag { padding: 6px 11px; border-radius: 999px; background: var(--accent-dark); color: var(--accent); font-size: .78rem; font-weight: 700; }
+    .project-summary { max-width: 760px; color: var(--muted); margin: 13px 0 28px; }
+    .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .detail { padding: 19px; border: 1px solid var(--line); border-radius: 12px; background: rgba(8,14,28,.35); }
+    .detail h4 { margin: 0 0 8px; color: var(--accent); font-size: .98rem; }
+    .detail p { margin: 0; color: #d0d9eb; }
+    .stack { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 23px; }
+    .stack span { padding: 7px 12px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); font-size: .85rem; }
+    .about-card { padding: 24px; border-left: 3px solid var(--accent); background: rgba(18,26,46,.75); border-radius: 0 12px 12px 0; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 30px 0 38px; color: var(--muted); }
+    .footer-content { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    footer p { margin: 4px 0; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 680px) {
+      header { padding: 58px 0 44px; }
+      .container { width: min(100% - 30px, var(--max)); }
+      .details { grid-template-columns: 1fr; }
+      main { padding-top: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="eyebrow">Portfólio acadêmico</div>
+      <h1>Guilherme Andrade<br>de Oliveira</h1>
+      <p class="subtitle">Estudante de Análise e Desenvolvimento de Sistemas · FATEC</p>
+      <p class="intro">
+        Sou estudante de Análise e Desenvolvimento de Sistemas, interessado no desenvolvimento
+        de sistemas e sempre buscando aprender novas tecnologias, aprimorar minhas habilidades
+        e evoluir pessoalmente.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#projeto">Conheça meu projeto</a>
+        <a class="button" href="https://github.com/guiDelta" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="sobre">
+      <div class="section-label">Sobre mim</div>
+      <h2>Aprendizado e desenvolvimento</h2>
+      <div class="about-card">
+        Atualmente curso Análise e Desenvolvimento de Sistemas na FATEC. Tenho interesse
+        em tecnologia e desenvolvimento de sistemas, buscando ampliar meus conhecimentos
+        por meio dos estudos e da criação de projetos.
+      </div>
+    </section>
+
+    <section id="projeto">
+      <div class="section-label">Projeto em destaque</div>
+      <h2>Um projeto desenvolvido na faculdade</h2>
+      <article class="project">
+        <div class="project-top">
+          <h3>Burguer Donalds — Totem de Autoatendimento</h3>
+          <span class="tag">Projeto acadêmico</span>
+        </div>
+        <p class="project-summary">
+          Prototipagem funcional de um sistema de autoatendimento para uma hamburgueria fictícia,
+          desenvolvido para permitir que o cliente escolha produtos e monte seu pedido por meio
+          de uma interface de totem.
+        </p>
+
+        <div class="details">
+          <div class="detail">
+            <h4>Problema</h4>
+            <p>
+              A proposta foi criar uma alternativa de autoatendimento para uma hamburgueria,
+              permitindo que o cliente consulte os produtos e organize seu pedido sem depender
+              de um atendente durante a escolha.
+            </p>
+          </div>
+          <div class="detail">
+            <h4>O que eu fiz</h4>
+            <p>
+              Desenvolvi uma prototipagem funcional de um totem com tela inicial, catálogo
+              de produtos com imagens e preços, seleção de itens, carrinho de compras,
+              finalização do pedido e simulação de pagamento.
+            </p>
+          </div>
+          <div class="detail">
+            <h4>Como eu fiz</h4>
+            <p>
+              Utilizei HTML para estruturar a página, CSS para desenvolver a parte visual
+              e JavaScript para implementar as funcionalidades e as interações do sistema.
+            </p>
+          </div>
+          <div class="detail">
+            <h4>Resultado</h4>
+            <p>
+              Foi desenvolvida uma prototipagem funcional que atende aos requisitos propostos
+              para o projeto. A atividade proporcionou experiência prática com desenvolvimento
+              web e com a utilização conjunta de HTML, CSS e JavaScript.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack" aria-label="Tecnologias utilizadas">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <p><strong>Guilherme Andrade de Oliveira</strong></p>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas · FATEC</p>
+      </div>
+      <div>
+        <p><a href="mailto:guilhermeandradedeoliveira2@gmail.com">guilhermeandradedeoliveira2@gmail.com</a></p>
+        <p><a href="https://github.com/guiDelta" target="_blank" rel="noopener noreferrer">github.com/guiDelta</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
